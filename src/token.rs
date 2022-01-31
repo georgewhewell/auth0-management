@@ -1,11 +1,11 @@
 use std::error::Error;
+use std::fmt::Formatter;
 use std::ops::Deref;
 use std::sync::atomic::{AtomicU64, Ordering};
 use std::time::{Duration, SystemTime, SystemTimeError};
 
 use async_mutex::Mutex;
 use reqwest::{Client, StatusCode};
-use serde::export::Formatter;
 use serde::{Deserialize, Serialize};
 
 /// Auth0 OAuth token.
